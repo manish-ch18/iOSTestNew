@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct GridModel{
-    var isSelected: Bool = false
-    var isIntractionEnable: Bool = false
+class GridModel{
+    var isGotSelected: Bool
+    var isGotColor: Bool
+    
+    init(isGotSelected: Bool, isGotColor: Bool){
+        self.isGotSelected = isGotSelected
+        self.isGotColor = isGotColor
+    }
 }
