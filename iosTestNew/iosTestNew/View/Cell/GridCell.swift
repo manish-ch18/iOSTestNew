@@ -7,15 +7,18 @@
 
 import UIKit
 
+//MARK:  Protocol for button tap
 protocol GridCellDelegate{
     func buttonTapped(with index: Int)
 }
 
 class GridCell: UICollectionViewCell {
     
+    //MARK: Properties
     @IBOutlet weak var gridButton: UIButton!
-    
     var delegate: GridCellDelegate?
+    
+    //MARK: Setup collectionview cell
     func setupCell(at index: Int, with item: GridModel){
         gridButton.tag = index
         DispatchQueue.main.async {
@@ -33,6 +36,8 @@ class GridCell: UICollectionViewCell {
             }
         }
     }
+    
+    //MARK: Button Tap
     @IBAction func gridButtonTapped(_ sender: UIButton) {
         delegate?.buttonTapped(with: sender.tag)
     }

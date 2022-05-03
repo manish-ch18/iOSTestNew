@@ -9,6 +9,7 @@ import UIKit
 
 class GridViewController: UIViewController {
 
+    //MARK: Properties
     @IBOutlet weak var numberTextfield: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -55,7 +56,7 @@ class GridViewController: UIViewController {
     
 }
  
-
+//MARK: CollectionViewDelegate, CollectionViewDataSource & CollectionViewDelegateFlowLayout Implemantation
 extension GridViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
@@ -80,6 +81,7 @@ extension GridViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
+//MARK: View Model Delegate
 extension GridViewController: GridViewModelDelegate{
     func updateGrid(with num: Int) {
         self.number = num
@@ -111,6 +113,7 @@ extension GridViewController: GridViewModelDelegate{
     }
 }
 
+//MARK: Cell Button Tap
 extension GridViewController: GridCellDelegate{
     func buttonTapped(with index: Int) {
         arrayGrid[index].isGotSelected = true

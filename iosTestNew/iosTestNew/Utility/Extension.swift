@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+//MARK: UIView Extension
 extension UIView {
     
     @IBInspectable
@@ -102,7 +102,7 @@ extension UIView {
     }
 }
 
-
+//MARK: UIViewController Extension
 extension UIViewController{
     func showAlert(title: String, message: String, buttonTitle: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

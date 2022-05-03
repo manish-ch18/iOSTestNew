@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: Model class
 class GridModel{
     var isGotSelected: Bool
     var isGotColor: Bool
