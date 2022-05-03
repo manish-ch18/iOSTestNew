@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grid View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GridViewController" customModule="iosTestNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtp-hC-nNx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter squre root number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxo-fZ-XOM">
+                                        <rect key="frame" x="20" y="10" width="299" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Zfp-pK-CXN"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNi-GY-ht4">
+                                        <rect key="frame" x="324" y="10" width="70" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="iQY-KT-CHj"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqL-Tf-NJa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Nxo-fZ-XOM" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="top" constant="10" id="83l-C6-u5w"/>
+                                    <constraint firstItem="GNi-GY-ht4" firstAttribute="leading" secondItem="Nxo-fZ-XOM" secondAttribute="trailing" constant="5" id="9pL-Or-NO4"/>
+                                    <constraint firstAttribute="trailing" secondItem="GNi-GY-ht4" secondAttribute="trailing" constant="20" id="LVQ-J1-4rv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nxo-fZ-XOM" secondAttribute="bottom" constant="10" id="MnX-IB-q46"/>
+                                    <constraint firstItem="GNi-GY-ht4" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="top" constant="10" id="NVk-jP-txd"/>
+                                    <constraint firstAttribute="bottom" secondItem="GNi-GY-ht4" secondAttribute="bottom" constant="10" id="dMA-Zz-cbm"/>
+                                    <constraint firstAttribute="height" constant="60" id="ytw-lM-ckM"/>
+                                    <constraint firstItem="Nxo-fZ-XOM" firstAttribute="leading" secondItem="wtp-hC-nNx" secondAttribute="leading" constant="20" id="ziS-1o-igk"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-tr-4cl">
+                                <rect key="frame" x="10" y="104" width="394" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wHQ-A2-gGH">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridCell" id="hmU-Kk-szL" customClass="GridCell" customModule="iosTestNew" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hNb-TR-JH6">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-fk-2Py">
+                                                    <rect key="frame" x="10" y="10" width="108" height="108"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FCg-fk-2Py" secondAttribute="bottom" constant="10" id="7Ee-Py-8fn"/>
+                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="leading" secondItem="hNb-TR-JH6" secondAttribute="leading" constant="10" id="NIS-lB-BZK"/>
+                                                <constraint firstAttribute="trailing" secondItem="FCg-fk-2Py" secondAttribute="trailing" constant="10" id="ZFZ-U2-Bcn"/>
+                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="top" secondItem="hNb-TR-JH6" secondAttribute="top" constant="10" id="gB1-Hi-h1M"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="gridButton" destination="FCg-fk-2Py" id="jXP-qa-o9N"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RZn-Gg-YEG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vtb-9N-lca"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fOC-tr-4cl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0zH-mA-yvF"/>
+                            <constraint firstItem="wtp-hC-nNx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2nh-HM-Mea"/>
+                            <constraint firstItem="fOC-tr-4cl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4oM-y9-S0t"/>
+                            <constraint firstItem="wtp-hC-nNx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Num-JR-cYn"/>
+                            <constraint firstItem="fOC-tr-4cl" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="bottom" id="P4a-Iq-4Q3"/>
+                            <constraint firstItem="wtp-hC-nNx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xl8-8I-exC"/>
+                            <constraint firstItem="fOC-tr-4cl" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="bottom" id="o4P-Si-yht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOC-tr-4cl" secondAttribute="trailing" constant="10" id="oQx-Zc-ADH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextfield" destination="Nxo-fZ-XOM" id="YTJ-QQ-oet"/>
+                        <outlet property="submitButton" destination="GNi-GY-ht4" id="hSf-4w-P73"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
