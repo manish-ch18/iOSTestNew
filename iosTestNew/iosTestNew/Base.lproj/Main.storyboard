@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-tr-4cl">
-                                <rect key="frame" x="10" y="104" width="394" height="758"/>
+                                <rect key="frame" x="5" y="104" width="404" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wHQ-A2-gGH">
                                     <size key="itemSize" width="128" height="128"/>
@@ -70,16 +70,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-fk-2Py">
-                                                    <rect key="frame" x="10" y="10" width="108" height="108"/>
+                                                    <rect key="frame" x="5" y="5" width="118" height="118"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="gridButtonTapped:" destination="hmU-Kk-szL" eventType="touchUpInside" id="irH-q8-aa9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="FCg-fk-2Py" secondAttribute="bottom" constant="10" id="7Ee-Py-8fn"/>
-                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="leading" secondItem="hNb-TR-JH6" secondAttribute="leading" constant="10" id="NIS-lB-BZK"/>
-                                                <constraint firstAttribute="trailing" secondItem="FCg-fk-2Py" secondAttribute="trailing" constant="10" id="ZFZ-U2-Bcn"/>
-                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="top" secondItem="hNb-TR-JH6" secondAttribute="top" constant="10" id="gB1-Hi-h1M"/>
+                                                <constraint firstAttribute="bottom" secondItem="FCg-fk-2Py" secondAttribute="bottom" constant="5" id="7Ee-Py-8fn"/>
+                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="leading" secondItem="hNb-TR-JH6" secondAttribute="leading" constant="5" id="NIS-lB-BZK"/>
+                                                <constraint firstAttribute="trailing" secondItem="FCg-fk-2Py" secondAttribute="trailing" constant="5" id="ZFZ-U2-Bcn"/>
+                                                <constraint firstItem="FCg-fk-2Py" firstAttribute="top" secondItem="hNb-TR-JH6" secondAttribute="top" constant="5" id="gB1-Hi-h1M"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -107,17 +110,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fOC-tr-4cl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0zH-mA-yvF"/>
+                            <constraint firstItem="fOC-tr-4cl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="0zH-mA-yvF"/>
                             <constraint firstItem="wtp-hC-nNx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2nh-HM-Mea"/>
                             <constraint firstItem="fOC-tr-4cl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4oM-y9-S0t"/>
                             <constraint firstItem="wtp-hC-nNx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Num-JR-cYn"/>
                             <constraint firstItem="fOC-tr-4cl" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="bottom" id="P4a-Iq-4Q3"/>
                             <constraint firstItem="wtp-hC-nNx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xl8-8I-exC"/>
                             <constraint firstItem="fOC-tr-4cl" firstAttribute="top" secondItem="wtp-hC-nNx" secondAttribute="bottom" id="o4P-Si-yht"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOC-tr-4cl" secondAttribute="trailing" constant="10" id="oQx-Zc-ADH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOC-tr-4cl" secondAttribute="trailing" constant="5" id="oQx-Zc-ADH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="fOC-tr-4cl" id="vWv-xM-yAt"/>
                         <outlet property="numberTextfield" destination="Nxo-fZ-XOM" id="YTJ-QQ-oet"/>
                         <outlet property="submitButton" destination="GNi-GY-ht4" id="hSf-4w-P73"/>
                     </connections>
